@@ -13,12 +13,13 @@ import com.wilfred.shopnova.ui.screens.Onboarding.OnboardingScreen2
 import com.wilfred.shopnova.ui.screens.Onboarding.OnboardingScreen3
 import com.wilfred.shopnova.ui.screens.Onboarding.OnboardingScreen3Preview
 import com.wilfred.shopnova.ui.screens.auth.RegisterScreen
+import com.wilfred.shopnova.ui.screens.splash.SplashScreen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_HOME
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -42,9 +43,12 @@ fun AppNavHost(
             OnboardingScreen2(navController)
         }
 
-        composable(ROUT_ONBOARDING3) {
-            OnboardingScreen3(navController)
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
         }
+
+
+
 
 
 
