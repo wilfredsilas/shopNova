@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.wilfred.shopnova.R
+import com.wilfred.shopnova.navigation.ROUT_DASHBOARD
 
 @Composable
 fun OnboardingScreen2(navController: NavController){
@@ -64,7 +65,7 @@ fun OnboardingScreen2(navController: NavController){
 
 
         Button(
-            onClick = {},
+            onClick = { navController.navigate(ROUT_DASHBOARD)},
             colors = ButtonDefaults.buttonColors(Color.Red),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(250.dp)

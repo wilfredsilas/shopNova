@@ -1,8 +1,12 @@
-package com.wilfred.shopnova.ui.screens.Home
+package com.wilfred.shopnova.ui.screens.Dashboard
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBackIosNew
+import androidx.compose.material.icons.filled.ContactPhone
+import androidx.compose.material.icons.filled.Contacts
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -15,14 +19,15 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.wilfred.shopnova.ui.screens.auth.LoginScreen
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController){
+fun DashboardScreen(navController: NavController){
 
 
     Column(
@@ -30,35 +35,35 @@ fun HomeScreen(navController: NavController){
     ) {
 
 
-//TopAppBar
+
         TopAppBar(
 
 
             title = { Text(
-                text = "Welcome Home.") },
+                text = "Admin Dashboard") },
             navigationIcon = {
                 IconButton(onClick = { }) {
-                Icon(
-                    imageVector = Icons.Default.Menu,
-                    contentDescription = "Menu"
-                )
-            }
+                    Icon(
+                        imageVector = Icons.Default.ArrowBackIosNew,
+                        contentDescription = "arrow back"
+                    )
+                }
 
             },
 
 
             actions = {
                 IconButton(onClick = { }) {
-                Icon(
-                    imageVector = Icons.Default.ShoppingCart,
-                    contentDescription = "shoppingcart"
-                )
-            }
+                    Icon(
+                        imageVector = Icons.Default.LocationOn,
+                        contentDescription = "shoppingcart"
+                    )
+                }
 
 
                 IconButton(onClick = { }) {
                     Icon(
-                        imageVector = Icons.Default.Notifications,
+                        imageVector = Icons.Default.ContactPhone,
                         contentDescription = "notification"
                     )
                 }
@@ -77,14 +82,6 @@ fun HomeScreen(navController: NavController){
 
         )
 
-        //End of topAppBar
-
-
-
-
-
-
-
 
 
     }
@@ -95,8 +92,8 @@ fun HomeScreen(navController: NavController){
 
 @Preview(showBackground= true)
 @Composable
-fun HomeScreenPreview(){
-    HomeScreen(rememberNavController())
+fun DashboardScreenPreview(){
+    DashboardScreen(rememberNavController())
 
 
 
